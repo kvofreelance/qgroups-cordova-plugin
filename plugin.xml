@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    id="com.qbix.QGroupsCordova"
+    version="1.0.0">
+
+    <name>QGroupsCordova</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0" />
+  </engines>
+
+  <asset src="www/QGroupsCordova.js" target="js/QGroupsCordova.js" />
+
+  <js-module src="www/QGroupsCordova.js" name="QGroupsCordova">
+    <clobbers target="QGroupsCordova" />
+  </js-module>
+
+  <!-- ios -->
+  <platform name="ios">
+
+    <config-file target="config.xml" parent="/widget">
+      <feature name="QGroupsCordova">
+        <param name="ios-package" value="QGroupsCordova"/>
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/QGroupsCordova.h" />
+
+    <source-file src="src/ios/QGroupsCordova.m" />
+
+  </platform>
+</plugin>
